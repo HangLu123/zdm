@@ -174,6 +174,7 @@ public class ZdmCrawler {
                         && Integer.parseInt(z.getComments()) > minComments //评论的数量
                         && !z.getPrice().contains("前") //不是前xxx名的耍猴抢购
                         && !pushedIds.contains(z.getArticleId()) //不是已经推送过的
+                        && z.getTitle().contains("小米")
         );
 
         filtered.forEach(o -> o.setPushed(false));
